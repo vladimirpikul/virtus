@@ -1,0 +1,14 @@
+.header-main{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 95px;
+  background-color: #2f3242;
+  box-shadow: 0 3px 80px rgba(0, 0, 0, 0.2);
+}

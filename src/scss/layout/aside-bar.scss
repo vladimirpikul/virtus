@@ -1,0 +1,31 @@
+.aside-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 100%;
+  z-index: 9;
+  background-color: #2f3242;
+  box-shadow: 3px 0 80px rgba(0, 0, 0, 0.2);
+}
+.aside-menu{
+  @extend %listreset;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 130px;
+
+  li{
+    &:hover,
+    &.active{
+      .menu-item-icon{
+        filter: brightness(100);
+      }
+    }
+
+    & + li{
+      margin-top: 65px;
+    }
+  }
+}

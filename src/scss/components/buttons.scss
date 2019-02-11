@@ -1,0 +1,13 @@
+.btn{
+  font-size: 18px;
+  border: 2px solid #2196f3;
+  border-radius: 30px;
+  background: transparent;
+  padding: 15px 30px;
+  color: #fff;
+  cursor: pointer;
+
+  &:focus{
+    outline: 0;
+  }
+}

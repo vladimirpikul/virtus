@@ -1,0 +1,68 @@
+.project-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 20px 10px 24px;
+  width: 100%;
+  min-width: 292px;
+  height: 95px;
+  background-color: #3a3e52;
+
+  .project-info{
+    display: flex;
+    align-items: center;
+  }
+
+  .img-wrap{
+    max-width: 42px;
+  }
+
+  .description{
+    margin-left: 22px;
+  }
+
+  .name{
+    color: #fff;
+    font-size: 16px;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
+  .link{
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
+  .link-price{
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+
+    & > * + *{
+      margin-left: 8px;
+    }
+  }
+
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 26px;
+    padding: 4px;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
+  .dot{
+    @include size(4px);
+
+    background-color: #9ca1b2;
+    border-radius: 50%;
+  }
+}
