@@ -19,12 +19,27 @@
     margin-left: 40px;
   }
 
+  .select-wrap{
+    position: relative;
+    display: inline-block;
+
+    &:after{
+      content: url('../images/chevron-down.png');
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
+  }
+
   .select-text{
     font-size: 16px;
     color: #fff;
   }
 
-  [name="project-select"]{
+  .project-select{
+    z-index: 1;
+    font-size: 16px;
     width: 160px;
     height: 38px;
     margin-left: 45px;
@@ -34,7 +49,11 @@
     border: 1px solid #62a0d5;
     border-radius: 19px;
     background-color: transparent;
-    
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
     option{
       background-color: #2480cd;
     }

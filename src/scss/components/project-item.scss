@@ -47,22 +47,43 @@
     }
   }
 
-  .menu{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    height: 26px;
-    padding: 4px;
-
-    &:hover{
-      opacity: 0.8;
-    }
-  }
-
   .dot{
     @include size(4px);
 
     background-color: #9ca1b2;
     border-radius: 50%;
+    position: relative;
+    display: block;
+  }
+
+  .menu{
+    padding: 12px 4px;
+    cursor: pointer;
+
+    &:hover{
+      opacity: 0.8;
+    }
+
+    .dot{
+      &:before{
+        @include size(4px);
+
+        content: '';
+        position: absolute;
+        background-color: #9ca1b2;
+        border-radius: 50%;
+        top: -8px;
+      }
+
+      &:after{
+        @include size(4px);
+
+        content: '';
+        position: absolute;
+        background-color: #9ca1b2;
+        border-radius: 50%;
+        bottom: -8px;
+      }
+    }
   }
 }

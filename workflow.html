@@ -9,48 +9,42 @@
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-  <!-- Font awesome -->
-  <link rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
-
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
 <body>
 <header class="header-main">
-  <a class="logo-wrap" href="#">
-    <img src="assets/images/virtus-logo.svg" alt="virtus" width="172" height="29">
-  </a>
-  <ul id="user-menu">
-    <li>
-      <button class="item btn add-btn">Add<span class="icon-plus">+</span></button>
-    </li>
-    <li>
-      <a class="item item-icon" href="">
-        <div class="img-wrap">
-          <img src="assets/images/search-icon.png" alt="">
-        </div>
-      </a>
-    </li>
-    <li>
-      <a class="item item-icon notify" href="">
-        <div class="img-wrap">
-          <img src="assets/images/bell-icon.png" alt="">
-        </div>
-      </a>
-    </li>
-    <li>
-      <a class="item item-user" href="">
-        <div class="img-wrap">
-          <img class="user-img" src="assets/images/ava1.png" alt="">
-        </div>
-        <i class="arrow-down fas fa-chevron-down"></i>
-      </a>
-    </li>
-  </ul>
+    <a class="logo-wrap" href="#">
+        <img src="assets/images/virtus-logo.svg" alt="virtus" width="172" height="29">
+    </a>
+    <ul id="user-menu">
+        <li>
+            <button class="item btn add-btn">Add<span class="icon-plus">+</span></button>
+        </li>
+        <li>
+            <a class="item item-icon" href="">
+                <div class="img-wrap">
+                    <img src="assets/images/search-icon.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="item item-icon notify" href="">
+                <div class="img-wrap">
+                    <img src="assets/images/bell-icon.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="item item-user" href="">
+                <div class="img-wrap">
+                    <img class="user-img" src="assets/images/ava1.png" alt="">
+                </div>
+                <img class="arrow-down" src="assets/images/chevron-down.png" alt="">
+            </a>
+        </li>
+    </ul>
 </header>
 <main>
   <aside class="aside-bar">
@@ -94,15 +88,17 @@
       </div>
       <div class="select-part">
         <span class="select-text">Show projects:</span>
-        <select name="project-select">
-            <option value="">All</option>
-            <option value="">Quened</option>
-            <option value="">Planning</option>
-            <option value="">Design</option>
-            <option value="">Development</option>
-            <option value="">Testing</option>
-            <option value="">Completed</option>
-        </select>
+        <div class="select-wrap">
+            <select class="project-select">
+                <option value="">All</option>
+                <option value="">Quened</option>
+                <option value="">Planning</option>
+                <option value="">Design</option>
+                <option value="">Development</option>
+                <option value="">Testing</option>
+                <option value="">Completed</option>
+            </select>
+        </div>
       </div>
     </div>
     <div class="workflow-content-wrap">
@@ -117,7 +113,7 @@
                   </div>
               </div>
               <a class="arrow" href="">
-                  <i class="arrow-right fas fa-chevron-right"></i>
+                  <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
               </a>
           </div>
           <div class="project-item">
@@ -134,11 +130,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
       </div>
       <div class="status-column">
@@ -152,7 +146,7 @@
                   </div>
               </div>
               <a class="arrow" href="">
-                  <i class="arrow-right fas fa-chevron-right"></i>
+                  <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
               </a>
           </div>
           <div class="project-item">
@@ -169,11 +163,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -189,11 +181,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -209,11 +199,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -229,11 +217,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
       </div>
       <div class="status-column">
@@ -247,7 +233,7 @@
                   </div>
               </div>
               <a class="arrow" href="">
-                  <i class="arrow-right fas fa-chevron-right"></i>
+                  <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
               </a>
           </div>
           <div class="project-item">
@@ -264,11 +250,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -284,11 +268,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -304,11 +286,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -324,11 +304,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
       </div>
       <div class="status-column">
@@ -342,7 +320,7 @@
                   </div>
               </div>
               <a class="arrow" href="">
-                  <i class="arrow-right fas fa-chevron-right"></i>
+                  <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
               </a>
           </div>
           <div class="project-item">
@@ -359,11 +337,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -379,11 +355,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -399,11 +373,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
       </div>
       <div class="status-column">
@@ -417,7 +389,7 @@
                   </div>
               </div>
               <a class="arrow" href="">
-                  <i class="arrow-right fas fa-chevron-right"></i>
+                  <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
               </a>
           </div>
           <div class="project-item">
@@ -434,11 +406,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
       </div>
       <div class="status-column">
@@ -452,7 +422,7 @@
                   </div>
               </div>
               <a class="arrow" href="">
-                  <i class="arrow-right fas fa-chevron-right"></i>
+                  <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
               </a>
           </div>
           <div class="project-item">
@@ -469,11 +439,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -489,11 +457,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
           <div class="project-item">
               <div class="project-info">
@@ -509,11 +475,9 @@
                       </div>
                   </div>
               </div>
-              <a class="menu" href="">
+              <div class="menu">
                   <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-              </a>
+              </div>
           </div>
       </div>
   </div>

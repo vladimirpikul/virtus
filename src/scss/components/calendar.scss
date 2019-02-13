@@ -1,7 +1,69 @@
-#calendar{
-  padding: 50px;
+.calendar{
+  height: 100%;
+
+  .ui-datepicker-inline{
+    height: 100%;
+  }
+
+  .ui-datepicker-header{
+    background-color: #3a3e52;
+    height: 95px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: #fff;
+    font-size: 24.5px;
+  }
+
+  .ui-datepicker-month{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ui-datepicker-year{
+    display: none;
+  }
 
   .ui-datepicker-calendar{
+    padding: 30px;
     width: 100%;
+    text-align: center;
+    height: calc(100% - 95px);
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next{
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
+  .ui-datepicker-prev{
+    left: 10%;
+  }
+
+  .ui-datepicker-next{
+    right: 10%;
+  }
+
+  .ui-state-active{
+    background-color: #2492ea;
+    border-radius: 50%;
+  }
+
+  a[class*='ui-state-']{
+    @include size(23px);
+
+    display: block;
+    margin: 0 auto;
+    line-height: 23px;
+    color: #fff;
   }
 }

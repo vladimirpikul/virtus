@@ -9,12 +9,6 @@
   <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-  <!-- Font awesome -->
-  <link rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
-
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/style.min.css">
 </head>
@@ -47,7 +41,7 @@
           <div class="img-wrap">
             <img class="user-img" src="assets/images/ava1.png" alt="">
           </div>
-          <i class="arrow-down fas fa-chevron-down"></i>
+          <img class="arrow-down" src="assets/images/chevron-down.png" alt="">
         </a>
       </li>
     </ul>
@@ -55,40 +49,69 @@
   <main>
     <aside class="aside-bar">
       <ul class="aside-menu">
-        <li class="active">
-          <a href="index.html">
-            <div class="img-wrap">
-              <img class="menu-item-icon" src="assets/images/home-icon.png" alt="">
-            </div>
-          </a></li>
-        <li>
-          <a href="workflow.html">
-            <div class="img-wrap">
-              <img class="menu-item-icon" src="assets/images/menu-icon.png" alt="">
-            </div>
-          </a></li>
-        <li>
-          <a href="">
-            <div class="img-wrap">
-              <img class="menu-item-icon" src="assets/images/trending-up-icon.png" alt="">
-            </div>
-          </a></li>
-        <li>
-          <a href="">
-            <div class="img-wrap">
-              <img class="menu-item-icon" src="assets/images/email-icon.png" alt="">
-            </div>
-          </a></li>
-        <li>
-          <a href="">
-            <div class="img-wrap">
-              <img class="menu-item-icon" src="assets/images/multiple-icon.png" alt="">
-            </div>
-          </a></li>
+          <li class="active">
+              <a href="index.html">
+                  <div class="img-wrap">
+                      <img class="menu-item-icon" src="assets/images/home-icon.png" alt="">
+                  </div>
+              </a></li>
+          <li>
+              <a href="workflow.html">
+                  <div class="img-wrap">
+                      <img class="menu-item-icon" src="assets/images/menu-icon.png" alt="">
+                  </div>
+              </a></li>
+          <li>
+              <a href="">
+                  <div class="img-wrap">
+                      <img class="menu-item-icon" src="assets/images/trending-up-icon.png" alt="">
+                  </div>
+              </a></li>
+          <li>
+              <a href="">
+                  <div class="img-wrap">
+                      <img class="menu-item-icon" src="assets/images/email-icon.png" alt="">
+                  </div>
+              </a></li>
+          <li>
+              <a href="">
+                  <div class="img-wrap">
+                      <img class="menu-item-icon" src="assets/images/multiple-icon.png" alt="">
+                  </div>
+              </a></li>
       </ul>
-    </aside>
+  </aside>
     <div class="home-content-wrap">
-      <div id="views-chart" style="width: 73%; height: 480px"></div>
+      <div class="views-chart" style="width: 73%; height: 480px"></div>
+      <div class="circle-counters">
+          <div class="item">
+              <div class="circle-counter views-counter">
+                  <span class="percents"></span>
+              </div>
+              <div class="info">
+                  <span class="counter">1300</span>
+                  <span class="text">VIEWS</span>
+              </div>
+          </div>
+          <div class="item">
+              <div class="circle-counter visitors-counter">
+                  <span class="percents"></span>
+              </div>
+              <div class="info">
+                  <span class="counter">800</span>
+                  <span class="text">VISITORS</span>
+              </div>
+          </div>
+          <div class="item">
+              <div class="circle-counter impression-counter">
+                  <span class="percents"></span>
+              </div>
+              <div class="info">
+                  <span class="counter">3800</span>
+                  <span class="text">IMPRESSIONS</span>
+              </div>
+          </div>
+      </div>
       <div class="your-projects-block default-block">
         <div class="head">
             <h1 class="h1 block-title">Your projects</h1>
@@ -109,11 +132,9 @@
                             </div>
                         </div>
                     </div>
-                    <a class="menu" href="">
+                    <div class="menu">
                         <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -131,11 +152,9 @@
                             </div>
                         </div>
                     </div>
-                    <a class="menu" href="">
+                    <div class="menu">
                         <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -153,11 +172,9 @@
                             </div>
                         </div>
                     </div>
-                    <a class="menu" href="">
+                    <div class="menu">
                         <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </a>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -175,16 +192,25 @@
                             </div>
                         </div>
                     </div>
-                    <a class="menu" href="">
+                    <div class="menu">
                         <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
       </div>
-      <div id="sales-chart" style="width: 46%; height: 400px"></div>
+      <div class="sales-chart-wrap">
+          <div class="sales-chart" style="height: 100%"></div>
+          <div class="select-wrap">
+              <span class="select-text">Show:</span>
+              <select class="sales-select">
+                  <option value="">Year</option>
+                  <option value="">Month</option>
+                  <option value="">Week</option>
+                  <option value="">Day</option>
+              </select>
+          </div>
+      </div>
       <div class="email-block default-block">
             <div class="head">
                 <h1 class="h1 block-title">Inbox (<span class="blue-text">2</span>)</h1>
@@ -198,7 +224,7 @@
                         <div class="description">
                             <div class="title-date">
                                 <a class="title" href="">Michelle Stewart</a>
-                                <span class="date new">Today, 5:32 PM</span>
+                                <span class="date new">Today, <time>5:32 PM</time></span>
                             </div>
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm.</p>
                         </div>
@@ -212,7 +238,7 @@
                         <div class="description">
                             <div class="title-date">
                                 <a class="title" href="">Michelle Stewart</a>
-                                <span class="date new">Today, 5:32 PM</span>
+                                <span class="date new">Today, <time>5:32 PM</time></span>
                             </div>
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm.</p>
                         </div>
@@ -226,7 +252,7 @@
                         <div class="description">
                             <div class="title-date">
                                 <a class="title" href="">Michelle Stewart</a>
-                                <span class="date">Today, 5:32 PM</span>
+                                <span class="date">Today, <time>5:32 PM</time></span>
                             </div>
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm.</p>
                         </div>
@@ -235,17 +261,8 @@
             </div>
         </div>
       <div class="calendar-block default-block">
-            <div class="head">
-                <a href="">
-                    <i class="arrow fas fa-chevron-left"></i>
-                </a>
-                <h1 class="h1 block-title">April</h1>
-                <a href="">
-                    <i class="arrow fas fa-chevron-right"></i>
-                </a>
-            </div>
-            <div id="calendar"></div>
-        </div>
+        <div class="calendar"></div>
+      </div>
     </div>
   </main>
 

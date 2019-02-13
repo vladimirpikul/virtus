@@ -33,6 +33,11 @@
     border-bottom: 1px solid #505464;
   }
 }
+.views-chart-wrap{
+  width: 73%;
+  height: 480px;
+  overflow: hidden;
+}
 .your-projects-block{
   height: 480px;
 
@@ -43,6 +48,47 @@
   
   .project-item{
     background-color: #2f3242;
+  }
+}
+.sales-chart-wrap{
+  width: 46%;
+  height: 400px;
+  position: relative;
+
+  .select-wrap{
+    position: absolute;
+    top: 44px;
+    right: 4%;
+
+    &:after{
+      content: url('../images/chevron-down-grey.png');
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+    }
+  }
+
+  .sales-select{
+    margin-left: 15px;
+    z-index: 1;
+    font-size: 16px;
+    width: 160px;
+    height: 38px;
+    outline: 0;
+    padding: 0 15px;
+    color: #9ea3b4;
+    border: 1px solid #515464;
+    border-radius: 19px;
+    background-color: transparent;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    option{
+      background-color: #2f3242;
+    }
   }
 }
 .email-block{
@@ -101,8 +147,8 @@
     align-items: center;
 
     .arrow{
-      font-size: 12px;
       padding: 10px;
+      vertical-align: middle;
     }
   }
 }

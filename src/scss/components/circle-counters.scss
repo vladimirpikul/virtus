@@ -1,0 +1,43 @@
+.circle-counters{
+  margin-left: 35px;
+  margin-top: 35px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 740px;
+
+  .item{
+    display: flex;
+    align-items: center;
+  }
+
+  .info{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .counter{
+    font-size: 22px;
+    color: #fff;
+  }
+  
+  .text{
+    font-size: 16px;
+    color: #9ca1b2;
+  }
+
+  .circle-counter{
+    position: relative;
+  }
+
+  .percents{
+    font-size: 22px;
+    color: #2196f3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

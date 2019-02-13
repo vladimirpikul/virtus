@@ -3,30 +3,49 @@ const salesChart = function drawSalesChart() {
   google.charts.setOnLoadCallback(drawColColors);
 
   function drawColColors() {
-    const data = new google.visualization.DataTable();
-    data.addColumn('timeofday', 'Time of Day');
-    data.addColumn('number', 'Sales');
-
-    data.addRows([
-      [{ v: [8, 0, 0], f: '8 am' }, 6],
-      [{ v: [9, 0, 0], f: '9 am' }, 11],
-      [{ v: [10, 0, 0], f: '10 am' }, 8],
-      [{ v: [11, 0, 0], f: '11 am' }, 3],
-      [{ v: [12, 0, 0], f: '12 pm' }, 2],
-      [{ v: [13, 0, 0], f: '1 pm' }, 3],
-      [{ v: [14, 0, 0], f: '2 pm' }, 3],
-      [{ v: [15, 0, 0], f: '3 pm' }, 8],
-      [{ v: [16, 0, 0], f: '4 pm' }, 5],
-      [{ v: [17, 0, 0], f: '5 pm' }, 9],
+    const data = google.visualization.arrayToDataTable([
+      ['Number', 'Sales'],
+      [1, 500],
+      [2, 1000],
+      [3, 700],
+      [4, 300],
+      [5, 200],
+      [6, 300],
+      [7, 300],
+      [8, 600],
+      [9, 400],
+      [10, 900],
+      [11, 800],
+      [12, 100],
     ]);
 
     const options = {
       title: 'Sales report',
+      titleTextStyle: {
+        color: '#fff',
+        fontSize: 24.5,
+        bold: false,
+        fontName: 'Montserrat',
+      },
       colors: ['#505464'],
+      tooltip: { trigger: 'none' },
       backgroundColor: '#2f3242',
+      legend: { position: 'none' },
+      chartArea: {
+        left: 30, bottom: 60, top: 95, right: 30,
+      },
+      vAxis:
+            {
+              gridlines: { count: 7, color: '#515464' },
+              textStyle: { color: '#2f3242' },
+            },
+      hAxis:
+            {
+              gridlines: { count: 0 },
+            },
     };
 
-    const chart = new google.visualization.ColumnChart($('#sales-chart')[0]);
+    const chart = new google.visualization.ColumnChart($('.sales-chart')[0]);
     chart.draw(data, options);
   }
 };
