@@ -67,13 +67,17 @@
   overflow: auto;
 
   .status-column{
-    width: 292px;
+    min-width: 292px;
 
     & + .status-column{
       margin-left: 20px;
     }
+  }
 
-    & > * + *{
+  .sortable{
+    @extend %listreset;
+
+    li + li{
       margin-top: 20px;
     }
   }

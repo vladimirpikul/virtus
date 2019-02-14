@@ -7,4 +7,5 @@ module.exports = [
   './node_modules/google-charts-offload/lib/google-charts-loader.min.js',
   './node_modules/jquery-datepicker/jquery-datepicker.js',
   './node_modules/jquery-circle-progress/dist/circle-progress.js',
+  './node_modules/jquery-ui-dist/jquery-ui.min.js',
 ];

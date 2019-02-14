@@ -32,7 +32,7 @@ const salesChart = function drawSalesChart() {
       backgroundColor: '#2f3242',
       legend: { position: 'none' },
       chartArea: {
-        left: 30, bottom: 60, top: 95, right: 30,
+        left: 30, bottom: 30, top: 95, right: 30,
       },
       vAxis:
             {
