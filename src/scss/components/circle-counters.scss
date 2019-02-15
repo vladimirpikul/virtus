@@ -1,21 +1,40 @@
 .circle-counters{
-  margin-left: 35px;
   margin-top: 35px;
   position: absolute;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 740px;
+  max-width: 38%;
+
+  @media (max-width: 1500px){
+    width: 65%;
+  }
+  @include media('<tablet'){
+    margin-top: 10px;
+  }
 
   .item{
     display: flex;
     align-items: center;
+    margin-left: 35px;
+
+    @include media('<desktop'){
+      margin-left: 25px;
+    }
+    @include media('<tablet'){
+      flex-direction: column;
+    }
   }
 
   .info{
     margin-left: 20px;
     display: flex;
     flex-direction: column;
+
+    @include media('<tablet'){
+      margin-left: 0;
+      align-items: center;
+    }
   }
   
   .counter{

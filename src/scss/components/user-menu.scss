@@ -1,8 +1,12 @@
-#user-menu {
+.user-menu {
   @extend %listreset;
 
   display: flex;
   align-items: center;
+
+  @include media('<phone'){
+    margin-left: auto;
+  }
 
   li {
     &:hover{
@@ -13,11 +17,19 @@
 
     & + li {
       margin-left: 40px;
+
+      @include media('<tablet'){
+        margin-left: 20px;
+      }
     }
   }
 
   .add-btn {
     padding-right: 20px;
+
+    @include media('<tablet'){
+      padding: 10px 12px;
+    }
 
     .icon-plus {
       font-size: 32px;
@@ -25,6 +37,16 @@
       line-height: 0;
       color: #2196f3;
       margin-left: 25px;
+
+      @include media('<tablet'){
+        margin-left: 0;
+      }
+    }
+
+    .text{
+      @include media('<tablet'){
+        display: none;
+      }
     }
   }
 

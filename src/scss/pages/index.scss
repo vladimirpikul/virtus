@@ -6,8 +6,25 @@
   margin-left: 95px;
   padding: 63px 23px 0 60px;
 
+  @include media('<desktop'){
+    padding: 35px 10px 0 25px;
+  }
+  @include media('<tablet'){
+    flex-direction: column;
+    margin-top: 140px;
+    margin-left: 0;
+    padding: 35px 10px 15px;
+  }
+  @include media('<phone'){
+    margin-top: 210px;
+  }
+
   & > *{
     margin-bottom: 1%;
+
+    @include media('<desktop'){
+      margin-bottom: 3%;
+    }
   }
 }
 .default-block{
@@ -15,6 +32,16 @@
   background-color: #2f3242;
   height: 400px;
   box-shadow: 0 3px 40px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 1500px){
+    width: 34%;
+  }
+  @include media('<widescreen'){
+    width: 49.5%;
+  }
+  @include media('<desktop'){
+    width: 100%;
+  }
 
   .head{
     background-color: #3a3e52;
@@ -37,13 +64,25 @@
   width: 73%;
   height: 480px;
   overflow: hidden;
+
+  @media (max-width: 1500px){
+    width: 65%;
+  }
+  @include media('<widescreen'){
+    width: 100%;
+    height: 400px;
+  }
+  @include media('<phone'){
+    height: 300px;
+  }
 }
 .your-projects-block{
   height: 480px;
+  overflow: auto;
 
-  .projects{
-    height: 385px;
-    overflow: auto;
+  @include media('<widescreen'){
+    order: 1;
+    height: 400px;
   }
   
   .project-item{
@@ -54,6 +93,16 @@
   width: 46%;
   height: 400px;
   position: relative;
+
+  @media (max-width: 1500px){
+    width: 65%;
+  }
+  @include media('<widescreen'){
+    width: 100%;
+  }
+  @include media('<phone'){
+    height: 300px;
+  }
 
   .select-wrap{
     position: absolute;
@@ -70,6 +119,7 @@
   }
 
   .sales-select{
+    cursor: pointer;
     margin-left: 15px;
     z-index: 1;
     font-size: 16px;
@@ -94,6 +144,10 @@
 .email-block{
   overflow: hidden;
 
+  @include media('<widescreen'){
+    order: 2;
+  }
+
   .blue-text{
     color: #2196f3;
   }
@@ -107,10 +161,18 @@
 
   .img-wrap{
     max-width: 42px;
+
+    @include media('<desktop'){
+      flex-grow: 0;
+    }
   }
 
   .description{
     margin-left: 22px;
+
+    @include media('<desktop'){
+      flex-grow: 1;
+    }
 
     .title-date{
       display: flex;
@@ -140,6 +202,18 @@
   }
 }
 .calendar-block{
+  @include media('<widescreen'){
+    order: 3;
+    width: 385px;
+  }
+  @include media('<tablet'){
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include media('<phone'){
+    width: 100%;
+  }
+
   .head{
     padding: 0 40px;
     display: flex;

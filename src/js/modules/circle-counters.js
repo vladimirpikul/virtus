@@ -1,7 +1,7 @@
 const circleCounters = function circleCounters() {
   $('.views-counter').circleProgress({
     value: 0.75,
-    size: 80,
+    size: 70,
     fill: '#2492ea',
     startAngle: 4.7,
   }).on('circle-animation-progress', function (event, progress, stepValue) {
@@ -9,7 +9,7 @@ const circleCounters = function circleCounters() {
   });
   $('.visitors-counter').circleProgress({
     value: 0.35,
-    size: 80,
+    size: 70,
     fill: '#2492ea',
     startAngle: 4.7,
   }).on('circle-animation-progress', function (event, progress, stepValue) {
@@ -17,7 +17,7 @@ const circleCounters = function circleCounters() {
   });
   $('.impression-counter').circleProgress({
     value: 0.62,
-    size: 80,
+    size: 70,
     fill: '#2492ea',
     startAngle: 4.7,
   }).on('circle-animation-progress', function (event, progress, stepValue) {

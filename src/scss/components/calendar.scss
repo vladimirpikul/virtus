@@ -30,6 +30,19 @@
     width: 100%;
     text-align: center;
     height: calc(100% - 95px);
+
+    @include media('<phone'){
+      padding: 20px 10px;
+    }
+
+    a[class*='ui-state-']{
+      @include size(23px);
+
+      display: block;
+      margin: 0 auto;
+      line-height: 23px;
+      color: #fff;
+    }
   }
 
   .ui-datepicker-prev,
@@ -56,14 +69,5 @@
   .ui-state-active{
     background-color: #2492ea;
     border-radius: 50%;
-  }
-
-  a[class*='ui-state-']{
-    @include size(23px);
-
-    display: block;
-    margin: 0 auto;
-    line-height: 23px;
-    color: #fff;
   }
 }

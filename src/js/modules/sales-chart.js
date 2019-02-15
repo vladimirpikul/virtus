@@ -34,19 +34,19 @@ const salesChart = function drawSalesChart() {
       chartArea: {
         left: 30, bottom: 30, top: 95, right: 30,
       },
-      vAxis:
-            {
-              gridlines: { count: 7, color: '#515464' },
-              textStyle: { color: '#2f3242' },
-            },
-      hAxis:
-            {
-              gridlines: { count: 0 },
-            },
+      vAxis: {
+        gridlines: { count: 7, color: '#515464' },
+        textStyle: { color: '#2f3242' },
+      },
+      hAxis: {
+        gridlines: { count: 0 },
+      },
     };
 
-    const chart = new google.visualization.ColumnChart($('.sales-chart')[0]);
-    chart.draw(data, options);
+    if ($('.sales-chart')[0]) {
+      const chart = new google.visualization.ColumnChart($('.sales-chart')[0]);
+      chart.draw(data, options);
+    }
   }
 };
 

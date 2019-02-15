@@ -17,23 +17,22 @@ const viewsChart = function drawChart() {
     const options = {
       curveType: 'function',
       chartArea: {
-        left: 0, bottom: 50, width: '100%', height: '100%',
+        left: 0, bottom: 50, width: '100%', height: '75%',
       },
       fontSize: 16,
       backgroundColor: '#2f3242',
-      vAxis:
-            {
-              gridlines: { count: 0 },
-            },
-      hAxis:
-            {
-              textStyle: { color: '#fff' },
-            },
+      vAxis: {
+        gridlines: { count: 0 },
+      },
+      hAxis: {
+        textStyle: { color: '#fff' },
+      },
     };
 
-    const chart = new google.visualization.LineChart($('.views-chart')[0]);
-    chart.draw(data, options);
+    if ($('.views-chart')[0]) {
+      const chart = new google.visualization.LineChart($('.views-chart')[0]);
+      chart.draw(data, options);
+    }
   }
 };
-
 export default viewsChart;
