@@ -29,6 +29,11 @@ const viewsChart = function drawChart() {
       },
     };
 
+    if ($(window).width() < 480) {
+      options.chartArea.height = '55%';
+      options.hAxis.textStyle.fontSize = 12;
+    }
+
     if ($('.views-chart')[0]) {
       const chart = new google.visualization.LineChart($('.views-chart')[0]);
       chart.draw(data, options);
