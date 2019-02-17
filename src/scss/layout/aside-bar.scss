@@ -12,9 +12,7 @@
     top: 70px;
     width: 100%;
     height: 70px;
-  }
-  @include media('<phone'){
-    top: 140px;
+    position: absolute;
   }
 }
 .aside-menu{
@@ -28,8 +26,11 @@
   @include media('<tablet'){
     flex-direction: row;
     margin-top: 0;
-    margin-left: 5%;
     height: 100%;
+    justify-content: center;
+  }
+  @include media('<phone'){
+    justify-content: space-around;
   }
 
   li{
@@ -46,6 +47,9 @@
       @include media('<tablet'){
         margin-top: 0;
         margin-left: 10%;
+      }
+      @include media('<phone'){
+        margin-left: 0;
       }
     }
   }

@@ -24,6 +24,9 @@
     @include media('<tablet'){
       flex-direction: column;
     }
+    @include media('<phone'){
+      margin-left: 20px;
+    }
   }
 
   .info{
@@ -40,11 +43,19 @@
   .counter{
     font-size: 22px;
     color: #fff;
+
+    @include media('<phone'){
+      font-size: 18px;
+    }
   }
   
   .text{
     font-size: 16px;
     color: #9ca1b2;
+
+    @include media('<phone'){
+      font-size: 14px;
+    }
   }
 
   .circle-counter{

@@ -6,7 +6,6 @@
   z-index: 10;
   padding: 0 25px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 95px;
@@ -17,17 +16,10 @@
     padding: 0 10px;
     height: 70px;
   }
-  @include media('<phone'){
-    padding: 10px;
-    height: 140px;
-  }
 
   .logo-wrap{
     @include media('<tablet'){
-      max-width: 150px;
-    }
-    @include media('<phone'){
-      margin-right: 100px;
+      max-width: 30%;
     }
   }
 }

@@ -15,9 +15,6 @@
     margin-left: 0;
     padding: 35px 10px 15px;
   }
-  @include media('<phone'){
-    margin-top: 210px;
-  }
 
   & > *{
     margin-bottom: 1%;
@@ -109,12 +106,22 @@
     top: 44px;
     right: 4%;
 
+    @include media('<phone'){
+      top: 50px;
+    }
+
     &:after{
       content: url('../images/chevron-down-grey.png');
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       right: 20px;
+    }
+  }
+
+  .select-text{
+    @include media('<phone') {
+      display: none;
     }
   }
 
@@ -135,6 +142,12 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+    @include media('<phone'){
+      width: 100px;
+      height: 30px;
+      font-size: 12px;
+    }
 
     option{
       background-color: #2f3242;

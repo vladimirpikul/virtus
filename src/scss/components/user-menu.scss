@@ -4,10 +4,6 @@
   display: flex;
   align-items: center;
 
-  @include media('<phone'){
-    margin-left: auto;
-  }
-
   li {
     &:hover{
       .item{
@@ -21,6 +17,9 @@
       @include media('<tablet'){
         margin-left: 20px;
       }
+      @include media('<phone'){
+        margin-left: 15px;
+      }
     }
   }
 
@@ -29,6 +28,9 @@
 
     @include media('<tablet'){
       padding: 10px 12px;
+    }
+    @include media('<phone'){
+      padding: 5px 9px;
     }
 
     .icon-plus {
@@ -41,6 +43,10 @@
       @include media('<tablet'){
         margin-left: 0;
       }
+      @include media('<phone'){
+        font-size: 22px;
+        vertical-align: middle;
+      }
     }
 
     .text{
@@ -52,6 +58,10 @@
 
   .item-icon{
     display: block;
+
+    @include media('<phone'){
+      width: 18px;
+    }
 
     .img-wrap{
       max-width: 23px;
@@ -83,10 +93,19 @@
 
       border-radius: 50%;
       overflow: hidden;
+
+      @include media('<phone'){
+        @include size(35px);
+      }
     }
 
     .arrow-down{
       margin-left: 10px;
+
+      @include media('<phone'){
+        margin-left: 5px;
+        width: 8px;
+      }
     }
   }
 }
