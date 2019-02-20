@@ -70,7 +70,6 @@
     "jquery-circle-progress": "^1.2.2",
     "jquery-datepicker": "^1.12.3",
     "jquery-ui-dist": "^1.12.1",
-    "normalize.css": "^5.0.0",
-    "select2": "^4.0.6-rc.1"
+    "normalize.css": "^5.0.0"
   }
 }

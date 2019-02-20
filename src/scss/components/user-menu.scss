@@ -3,6 +3,7 @@
 
   display: flex;
   align-items: center;
+  margin-right: 25px;
 
   li {
     &:hover{
@@ -12,7 +13,7 @@
     }
 
     & + li {
-      margin-left: 40px;
+      margin-left: 56px;
 
       @include media('<tablet'){
         margin-left: 20px;
@@ -34,8 +35,7 @@
     }
 
     .icon-plus {
-      font-size: 32px;
-      vertical-align: sub;
+      font-size: 28px;
       line-height: 0;
       color: #2196f3;
       margin-left: 25px;
@@ -44,7 +44,7 @@
         margin-left: 0;
       }
       @include media('<phone'){
-        font-size: 22px;
+        font-size: 20px;
         vertical-align: middle;
       }
     }
@@ -66,27 +66,46 @@
     .img-wrap{
       max-width: 23px;
     }
+
+    .icon-bell,
+    .icon-search{
+      font-size: 36px;
+      color: #fff;
+    }
   }
 
   .notify{
     position: relative;
 
     &:after{
-      @include size(15px);
+      @include size(17px);
 
       content: '';
       position: absolute;
       background-color: #2196f3;
       border: 3px solid #2f3242;
       border-radius: 50%;
-      right: -5px;
-      top: -2px;
+      right: -11px;
+      top: 2px;
     }
   }
 
   .item-user{
     display: flex;
     align-items: center;
+    position: relative;
+
+    &:after{
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      right: -21px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+    }
 
     .img-wrap{
       @include size(56px);

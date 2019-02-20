@@ -1,27 +1,21 @@
 const circleCounters = function circleCounters() {
-  $('.views-counter').circleProgress({
-    value: 0.75,
-    size: 70,
-    fill: '#2492ea',
-    startAngle: 4.7,
-  }).on('circle-animation-progress', function (event, progress, stepValue) {
-    $(this).find('.percents').text(`${Math.round(stepValue * 100)}%`);
-  });
-  $('.visitors-counter').circleProgress({
-    value: 0.35,
-    size: 70,
-    fill: '#2492ea',
-    startAngle: 4.7,
-  }).on('circle-animation-progress', function (event, progress, stepValue) {
-    $(this).find('.percents').text(`${Math.round(stepValue * 100)}%`);
-  });
-  $('.impression-counter').circleProgress({
-    value: 0.62,
-    size: 70,
-    fill: '#2492ea',
-    startAngle: 4.7,
-  }).on('circle-animation-progress', function (event, progress, stepValue) {
-    $(this).find('.percents').text(`${Math.round(stepValue * 100)}%`);
+  if(!$('.circle-counter').length) return;
+
+  const $counter = $('.circle-counter');
+
+  console.log($(this).attr('data-value'));
+
+  $.each($counter, function () {
+    $(this).circleProgress({
+      value: $(this).attr('data-value') * 0.01,
+      size: 75,
+      thickness: 4,
+      fill: '#2492ea',
+      emptyFill: '#505464',
+      startAngle: 4.7,
+    }).on('circle-animation-progress', function (event, progress, stepValue) {
+      $(this).find('.percents').text(`${Math.round(stepValue * 100)}%`);
+    });
   });
 };
 

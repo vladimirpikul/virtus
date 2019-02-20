@@ -3,10 +3,10 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
-  padding: 10px 20px 10px 24px;
+  padding: 10px 24px;
   width: 100%;
   min-width: 292px;
-  height: 95px;
+  height: 91px;
   background-color: #3a3e52;
 
   .project-info{
@@ -25,6 +25,7 @@
   .name{
     color: #fff;
     font-size: 16px;
+    font-weight: bold;
 
     &:hover{
       opacity: 0.8;
@@ -41,10 +42,6 @@
     margin-top: 6px;
     display: flex;
     align-items: center;
-
-    & > * + *{
-      margin-left: 8px;
-    }
   }
 
   .dot{
@@ -54,6 +51,11 @@
     border-radius: 50%;
     position: relative;
     display: block;
+    margin-left: 12px;
+  }
+
+  .price{
+    margin-left: 12px;
   }
 
   .menu{
@@ -72,7 +74,7 @@
         position: absolute;
         background-color: #9ca1b2;
         border-radius: 50%;
-        top: -8px;
+        top: -7px;
       }
 
       &:after{
@@ -82,7 +84,7 @@
         position: absolute;
         background-color: #9ca1b2;
         border-radius: 50%;
-        bottom: -8px;
+        bottom: -7px;
       }
     }
   }

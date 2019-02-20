@@ -1,38 +1,35 @@
 const salesChart = function drawSalesChart() {
+  if(!$('.sales-chart').length) return;
+
+  const $mySalesChart = $('.sales-chart')[0];
+
   google.charts.load('current', { packages: ['corechart', 'bar'] });
   google.charts.setOnLoadCallback(drawColColors);
 
   function drawColColors() {
     const data = google.visualization.arrayToDataTable([
       ['Number', 'Sales'],
-      [1, 500],
+      [1, 700],
       [2, 1000],
-      [3, 700],
-      [4, 300],
-      [5, 200],
-      [6, 300],
-      [7, 300],
-      [8, 600],
-      [9, 400],
+      [3, 800],
+      [4, 500],
+      [5, 300],
+      [6, 500],
+      [7, 500],
+      [8, 700],
+      [9, 600],
       [10, 900],
       [11, 800],
-      [12, 100],
+      [12, 200],
     ]);
 
     const options = {
-      title: 'Sales report',
-      titleTextStyle: {
-        color: '#fff',
-        fontSize: 24.5,
-        bold: false,
-        fontName: 'Montserrat',
-      },
       colors: ['#505464'],
       tooltip: { trigger: 'none' },
       backgroundColor: '#2f3242',
       legend: { position: 'none' },
       chartArea: {
-        left: 30, bottom: 30, top: 95, right: 30,
+        left: 35, bottom: 50, top: 95, right: 35,
       },
       vAxis: {
         gridlines: { count: 7, color: '#515464' },
@@ -43,10 +40,8 @@ const salesChart = function drawSalesChart() {
       },
     };
 
-    if ($('.sales-chart')[0]) {
-      const chart = new google.visualization.ColumnChart($('.sales-chart')[0]);
-      chart.draw(data, options);
-    }
+    const chart = new google.visualization.ColumnChart($mySalesChart);
+    chart.draw(data, options);
   }
 };
 

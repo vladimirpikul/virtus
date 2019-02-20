@@ -1,15 +1,19 @@
 const viewsChart = function drawChart() {
+  if(!$('.views-chart').length) return;
+
+  const $myVievsChart = $('.views-chart')[0];
+
   google.charts.load('current', { packages: ['corechart'] });
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
     const data = google.visualization.arrayToDataTable([
       ['Day', 'Views'],
-      ['SUN', 700],
-      ['MON', 1100],
-      ['TUE', 900],
-      ['WED', 1000],
-      ['THU', 800],
+      ['SUN', 600],
+      ['MON', 1050],
+      ['TUE', 850],
+      ['WED', 950],
+      ['THU', 700],
       ['FRI', 1200],
       ['SAT', 800],
     ]);
@@ -20,12 +24,19 @@ const viewsChart = function drawChart() {
         left: 0, bottom: 50, width: '100%', height: '75%',
       },
       fontSize: 16,
-      backgroundColor: '#2f3242',
+      backgroundColor: 'transparent',
       vAxis: {
         gridlines: { count: 0 },
       },
       hAxis: {
-        textStyle: { color: '#fff' },
+        textStyle: {
+          color: '#fff',
+          bold: true,
+        },
+        viewWindow: {
+          min: 1,
+          max: 6
+        },
       },
     };
 
@@ -34,10 +45,8 @@ const viewsChart = function drawChart() {
       options.hAxis.textStyle.fontSize = 12;
     }
 
-    if ($('.views-chart')[0]) {
-      const chart = new google.visualization.LineChart($('.views-chart')[0]);
-      chart.draw(data, options);
-    }
+    const chart = new google.visualization.LineChart($myVievsChart);
+    chart.draw(data, options);
   }
 };
 export default viewsChart;

@@ -1,4 +1,4 @@
-.workflow-row{
+.select-row{
   margin-top: 95px;
   margin-left: 95px;
   background-color: #2480cd;
@@ -27,6 +27,7 @@
   .all-projects{
     color: #2b2d3c;
     font-size: 18px;
+    letter-spacing: 0.02em;
   }
   
   .menu-title{
@@ -39,22 +40,24 @@
     }
   }
 
-  .select-part{
-    @include media('<tablet'){
-      margin-left: auto;
-    }
-  }
-
   .select-wrap{
     position: relative;
     display: inline-block;
 
+    @include media('<tablet'){
+      margin-left: auto;
+    }
+
     &:after{
-      content: url('../images/chevron-down.png');
+      content: '';
       position: absolute;
+      width: 8px;
+      height: 8px;
       top: 50%;
-      transform: translateY(-50%);
-      right: 20px;
+      transform: translateY(-50%) rotate(45deg);
+      right: 24px;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
     }
   }
 
@@ -69,9 +72,9 @@
     font-size: 16px;
     width: 160px;
     height: 38px;
-    margin-left: 45px;
+    margin-left: 25px;
     outline: 0;
-    padding: 0 15px;
+    padding: 0 20px;
     color: #fff;
     border: 1px solid #62a0d5;
     border-radius: 19px;
@@ -92,7 +95,7 @@
 }
 .workflow-content-wrap{
   margin-left: 95px;
-  padding: 40px 20px 20px 60px;
+  padding: 37px 20px 20px 60px;
   height: calc(100vh - 190px);
   display: flex;
   overflow: auto;
@@ -107,7 +110,7 @@
     min-width: 292px;
 
     & + .status-column{
-      margin-left: 20px;
+      margin-left: 21px;
     }
   }
 
@@ -116,8 +119,14 @@
 
     min-height: 95px;
 
+    .ui-state-highlight{
+      height: 91px;
+      border: 1px dashed grey;
+      border-radius: 5px;
+    }
+
     li + li{
-      margin-top: 20px;
+      margin-top: 25px;
     }
   }
 }

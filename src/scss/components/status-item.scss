@@ -2,9 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 23px 10px 0;
   width: 100%;
   height: 75px;
+  margin-bottom: 22px;
+  position: relative;
+
+  &:after{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    right: 28px;
+    border-right: 2px solid #9ea3b4;
+    border-top: 2px solid #9ea3b4;
+  }
 
   .status-info{
     display: flex;
@@ -13,20 +26,23 @@
 
   .title{
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
   }
 
   .details{
-    margin-top: 6px;
+    margin-top: 3px;
     display: flex;
     align-items: center;
+    letter-spacing: 0.03em;
 
-    & > * + *{
-      margin-left: 8px;
+    .dot{
+      margin-left: 10px;
     }
     
     .price{
       color: #2196f3;
+      margin-left: 10px;
     }
   }
 

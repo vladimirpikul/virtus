@@ -16,6 +16,7 @@
 
   .ui-datepicker-month{
     position: absolute;
+    font-weight: bold;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -26,7 +27,8 @@
   }
 
   .ui-datepicker-calendar{
-    padding: 30px;
+    padding: 45px 35px 40px;
+    font-weight: bold;
     width: 100%;
     text-align: center;
     height: calc(100% - 95px);
@@ -47,7 +49,7 @@
 
   .ui-datepicker-prev,
   .ui-datepicker-next{
-    padding: 10px;
+    padding: 15px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -60,10 +62,38 @@
 
   .ui-datepicker-prev{
     left: 10%;
+
+    &:after{
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      left: 50%;
+      border-left: 2px solid #9ea3b4;
+      border-top: 2px solid #9ea3b4;
+    }
   }
 
   .ui-datepicker-next{
     right: 10%;
+
+    &:after{
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      left: 50%;
+      border-right: 2px solid #9ea3b4;
+      border-top: 2px solid #9ea3b4;
+    }
+  }
+
+  .ui-icon{
+    display: none;
   }
 
   .ui-state-active{

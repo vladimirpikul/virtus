@@ -5,16 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Virtus</title>
-
-  <!-- Google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/style.min.css">
 </head>
 
 <body>
-<header class="header-main">
+<header class="header">
     <a class="logo-wrap" href="#">
         <img src="assets/images/virtus-logo.svg" alt="virtus" width="172" height="29">
     </a>
@@ -25,14 +22,14 @@
         <li>
             <a class="item item-icon" href="">
                 <div class="img-wrap">
-                    <img src="assets/images/search-icon.png" alt="search">
+                    <i class="icon-search"></i>
                 </div>
             </a>
         </li>
         <li>
             <a class="item item-icon notify" href="">
                 <div class="img-wrap">
-                    <img src="assets/images/bell-icon.png" alt="notify">
+                    <i class="icon-bell"></i>
                 </div>
             </a>
         </li>
@@ -41,62 +38,56 @@
                 <div class="img-wrap">
                     <img class="user-img" src="assets/images/ava1.png" alt="user">
                 </div>
-                <img class="arrow-down" src="assets/images/chevron-down.png" alt="">
             </a>
         </li>
     </ul>
 </header>
 <main>
-  <aside class="aside-bar">
-    <ul class="aside-menu">
-      <li>
-        <a href="index.html">
-          <div class="img-wrap">
-            <img class="menu-item-icon" src="assets/images/home-icon.png" alt="">
-          </div>
-        </a></li>
-      <li class="active">
-        <a href="workflow.html">
-          <div class="img-wrap">
-            <img class="menu-item-icon" src="assets/images/menu-icon.png" alt="">
-          </div>
-        </a></li>
-      <li>
-        <a href="">
-          <div class="img-wrap">
-            <img class="menu-item-icon" src="assets/images/trending-up-icon.png" alt="">
-          </div>
-        </a></li>
-      <li>
-        <a href="">
-          <div class="img-wrap">
-            <img class="menu-item-icon" src="assets/images/email-icon.png" alt="">
-          </div>
-        </a></li>
-      <li>
-        <a href="">
-          <div class="img-wrap">
-            <img class="menu-item-icon" src="assets/images/multiple-icon.png" alt="">
-          </div>
-        </a></li>
-    </ul>
-  </aside>
-    <div class="workflow-row">
+    <aside class="aside-bar">
+        <ul class="aside-menu">
+            <li>
+                <a href="index.html">
+                    <i class="menu-icon icon-home"></i>
+                </a>
+            </li>
+            <li class="active">
+                <a href="workflow.html">
+                    <i class="menu-icon icon-menu"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="menu-icon icon-trending-up"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="menu-icon icon-email"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="menu-icon icon-account-multiple"></i>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="select-row">
       <div class="title-part">
         <span class="all-projects">All Projects (358)</span>
-        <span class="menu-title">Workflow</span>
+        <a href="" class="menu-title">Workflow</a>
       </div>
-      <div class="select-part">
+      <div class="select-wrap">
         <span class="select-text">Show projects:</span>
         <div class="select-wrap">
             <select class="project-select">
-                <option value="">All</option>
-                <option value="">Quened</option>
-                <option value="">Planning</option>
-                <option value="">Design</option>
-                <option value="">Development</option>
-                <option value="">Testing</option>
-                <option value="">Completed</option>
+                <option>All</option>
+                <option>Quened</option>
+                <option>Planning</option>
+                <option>Design</option>
+                <option>Development</option>
+                <option>Testing</option>
+                <option>Completed</option>
             </select>
         </div>
       </div>
@@ -112,7 +103,6 @@
                       <span class="price">$1500</span>
                   </div>
               </div>
-              <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
           </div>
           <ul class="sortable">
               <li><div class="project-item ui-widget-content">
@@ -138,14 +128,13 @@
       <div class="status-column">
           <div class="status-item">
               <div class="status-info">
-                  <span class="title">Planing</span>
+                  <span class="title">Planning</span>
                   <div class="details">
                       <span class="counter">4 projects</span>
                       <span class="dot"></span>
                       <span class="price">$4100</span>
                   </div>
               </div>
-              <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
           </div>
           <ul class="sortable">
               <li><div class="project-item">
@@ -232,7 +221,6 @@
                       <span class="price">$5200</span>
                   </div>
               </div>
-              <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
           </div>
           <ul class="sortable">
               <li><div class="project-item">
@@ -319,7 +307,6 @@
                       <span class="price">$4200</span>
                   </div>
               </div>
-              <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
           </div>
           <ul class="sortable">
               <li><div class="project-item">
@@ -388,7 +375,6 @@
                       <span class="price">$1500</span>
                   </div>
               </div>
-              <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
           </div>
           <ul class="sortable">
               <li><div class="project-item">
@@ -421,7 +407,6 @@
                       <span class="price">$3700</span>
                   </div>
               </div>
-              <img class="arrow-right" src="assets/images/chevron-right.png" alt="">
           </div>
           <ul class="sortable">
               <li><div class="project-item">

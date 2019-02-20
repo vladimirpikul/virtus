@@ -1,6 +1,12 @@
 const dragDrop = function () {
-  $('.sortable').sortable({
+  if(!$('.sortable')) return;
+
+  const $mySortableTable = $('.sortable');
+
+  $mySortableTable.sortable({
+    placeholder: 'ui-state-highlight',
     connectWith: $('.sortable'),
   }).disableSelection();
 };
+
 export default dragDrop;
