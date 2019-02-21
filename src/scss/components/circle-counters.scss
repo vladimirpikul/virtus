@@ -44,6 +44,7 @@
     font-size: 22px;
     color: #fff;
     font-weight: bold;
+    white-space: nowrap;
 
     @include media('<phone'){
       font-size: 18px;

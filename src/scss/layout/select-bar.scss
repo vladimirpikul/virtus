@@ -29,7 +29,7 @@
     font-size: 18px;
     letter-spacing: 0.02em;
   }
-  
+
   .menu-title{
     font-size: 18px;
     color: #fff;
@@ -90,43 +90,6 @@
 
     option{
       background-color: #2480cd;
-    }
-  }
-}
-.workflow-content-wrap{
-  margin-left: 95px;
-  padding: 37px 20px 20px 60px;
-  height: calc(100vh - 190px);
-  display: flex;
-  overflow: auto;
-
-  @include media('<tablet'){
-    margin-left: 0;
-    padding: 35px 10px 15px;
-    height: calc(100vh - 235px);
-  }
-
-  .status-column{
-    min-width: 292px;
-
-    & + .status-column{
-      margin-left: 21px;
-    }
-  }
-
-  .sortable{
-    @extend %listreset;
-
-    min-height: 95px;
-
-    .ui-state-highlight{
-      height: 91px;
-      border: 1px dashed grey;
-      border-radius: 5px;
-    }
-
-    li + li{
-      margin-top: 25px;
     }
   }
 }

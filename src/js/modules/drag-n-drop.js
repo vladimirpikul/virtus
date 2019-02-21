@@ -1,11 +1,9 @@
-const dragDrop = function () {
-  if(!$('.sortable')) return;
-
+const dragDrop = () => {
   const $mySortableTable = $('.sortable');
 
   $mySortableTable.sortable({
     placeholder: 'ui-state-highlight',
-    connectWith: $('.sortable'),
+    connectWith: $mySortableTable,
   }).disableSelection();
 };
 

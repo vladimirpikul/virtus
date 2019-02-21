@@ -1,0 +1,13 @@
+.your-projects-block{
+  height: 476px;
+  overflow: hidden;
+
+  @include media('<widescreen'){
+    order: 1;
+    height: 400px;
+  }
+
+  .project-item{
+    background-color: #2f3242;
+  }
+}

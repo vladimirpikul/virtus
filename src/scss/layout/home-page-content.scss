@@ -1,0 +1,59 @@
+.home-content-wrap{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 95px;
+  margin-left: 95px;
+  padding: 63px 23px 0 60px;
+
+  @include media('<desktop'){
+    padding: 35px 10px 0 25px;
+  }
+  @include media('<tablet'){
+    flex-direction: column;
+    margin-top: 140px;
+    margin-left: 0;
+    padding: 35px 10px 15px;
+  }
+
+  & > *{
+    margin-bottom: 1%;
+
+    @include media('<desktop'){
+      margin-bottom: 3%;
+    }
+  }
+}
+.default-block{
+  width: 26%;
+  background-color: #2f3242;
+  height: 400px;
+  box-shadow: 0 3px 40px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 1500px){
+    width: 34%;
+  }
+  @include media('<widescreen'){
+    width: 49.5%;
+  }
+  @include media('<desktop'){
+    width: 100%;
+  }
+
+  .head{
+    background-color: #3a3e52;
+    height: 95px;
+    text-align: center;
+    line-height: 95px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+  }
+
+  .block-title{
+    color: #fff;
+    margin: 0;
+  }
+
+  .item{
+    border-bottom: 1px solid #505464;
+  }
+}

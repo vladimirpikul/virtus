@@ -1,9 +1,5 @@
 const circleCounters = function circleCounters() {
-  if(!$('.circle-counter').length) return;
-
   const $counter = $('.circle-counter');
-
-  console.log($(this).attr('data-value'));
 
   $.each($counter, function () {
     $(this).circleProgress({

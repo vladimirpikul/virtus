@@ -1,7 +1,7 @@
 const salesChart = function drawSalesChart() {
-  if(!$('.sales-chart').length) return;
-
   const $mySalesChart = $('.sales-chart')[0];
+
+  if (!$mySalesChart) return;
 
   google.charts.load('current', { packages: ['corechart', 'bar'] });
   google.charts.setOnLoadCallback(drawColColors);

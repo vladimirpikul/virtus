@@ -1,5 +1,5 @@
-const viewsChart = function drawChart() {
-  if(!$('.views-chart').length) return;
+const viewsChart = function drawViewsChart() {
+  if (!$('.views-chart').length) return;
 
   const $myVievsChart = $('.views-chart')[0];
 
@@ -7,8 +7,21 @@ const viewsChart = function drawChart() {
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
-    const data = google.visualization.arrayToDataTable([
-      ['Day', 'Views'],
+    // const data = google.visualization.arrayToDataTable([
+    //   ['Day', 'Views'],
+    //   ['SUN', 600],
+    //   ['MON', 1050],
+    //   ['TUE', 850],
+    //   ['WED', 950],
+    //   ['THU', 700],
+    //   ['FRI', 1200],
+    //   ['SAT', 800],
+    // ]);
+
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Day');
+    data.addColumn('number', 'Views');
+    data.addRows([
       ['SUN', 600],
       ['MON', 1050],
       ['TUE', 850],
@@ -17,6 +30,7 @@ const viewsChart = function drawChart() {
       ['FRI', 1200],
       ['SAT', 800],
     ]);
+
 
     const options = {
       curveType: 'function',
@@ -29,13 +43,14 @@ const viewsChart = function drawChart() {
         gridlines: { count: 0 },
       },
       hAxis: {
+        gridlines: { count: 9 },
         textStyle: {
           color: '#fff',
           bold: true,
         },
         viewWindow: {
           min: 1,
-          max: 6
+          max: 6,
         },
       },
     };
@@ -46,6 +61,7 @@ const viewsChart = function drawChart() {
     }
 
     const chart = new google.visualization.LineChart($myVievsChart);
+    //const chart = new google.visualization.AreaChart($myVievsChart);
     chart.draw(data, options);
   }
 };
