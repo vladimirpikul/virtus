@@ -1,68 +1,50 @@
 const viewsChart = function drawViewsChart() {
-  if (!$('.views-chart').length) return;
+    if (!$('.views-chart').length) return;
 
-  const $myVievsChart = $('.views-chart')[0];
+    const $myVievsChart = $('.views-chart')[0].getContext('2d');
+    const chart = new Chart($myVievsChart, {
+        type: 'line',
 
-  google.charts.load('current', { packages: ['corechart'] });
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    // const data = google.visualization.arrayToDataTable([
-    //   ['Day', 'Views'],
-    //   ['SUN', 600],
-    //   ['MON', 1050],
-    //   ['TUE', 850],
-    //   ['WED', 950],
-    //   ['THU', 700],
-    //   ['FRI', 1200],
-    //   ['SAT', 800],
-    // ]);
-
-    const data = new google.visualization.DataTable();
-    data.addColumn('string', 'Day');
-    data.addColumn('number', 'Views');
-    data.addRows([
-      ['SUN', 600],
-      ['MON', 1050],
-      ['TUE', 850],
-      ['WED', 950],
-      ['THU', 700],
-      ['FRI', 1200],
-      ['SAT', 800],
-    ]);
-
-
-    const options = {
-      curveType: 'function',
-      chartArea: {
-        left: 0, bottom: 50, width: '100%', height: '75%',
-      },
-      fontSize: 16,
-      backgroundColor: 'transparent',
-      vAxis: {
-        gridlines: { count: 0 },
-      },
-      hAxis: {
-        gridlines: { count: 9 },
-        textStyle: {
-          color: '#fff',
-          bold: true,
+        data: {
+            labels: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+            datasets: [{
+                backgroundColor: '#2c4767',
+                borderColor: '#2196f3',
+                data: [600, 1050, 850, 950, 750, 1200, 800],
+            }]
         },
-        viewWindow: {
-          min: 1,
-          max: 6,
-        },
-      },
-    };
 
-    if ($(window).width() < 480) {
-      options.chartArea.height = '55%';
-      options.hAxis.textStyle.fontSize = 12;
-    }
-
-    const chart = new google.visualization.LineChart($myVievsChart);
-    //const chart = new google.visualization.AreaChart($myVievsChart);
-    chart.draw(data, options);
-  }
+        options: {
+            maintainAspectRatio: false,
+            legend: {
+                display: false,
+            },
+            scales: {
+                xAxes: [{
+                    offset: true,
+                    ticks: {
+                        min: 'MON',
+                        max: 'FRI',
+                        fontColor: '#fff',
+                        fontSize: 16,
+                    },
+                    gridLines: {
+                        offsetGridLines: 'true',
+                        color: '#454858',
+                    }
+                }],
+                yAxes: [{
+                    display: false,
+                }],
+            },
+            layout: {
+                padding: {
+                    top: 150,
+                    bottom: 0,
+                }
+            }
+        }
+    });
 };
+
 export default viewsChart;

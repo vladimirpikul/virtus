@@ -1,6 +1,7 @@
 .sales-chart-wrap{
   width: 45%;
   height: 400px;
+  background-color: #2f3242;
   position: relative;
   box-shadow: 0 3px 40px rgba(0, 0, 0, 0.2);
 
@@ -10,7 +11,7 @@
   @include media('<widescreen'){
     width: 100%;
   }
-  @include media('<phone'){
+  @include media('<tablet'){
     height: 300px;
   }
 
@@ -20,16 +21,16 @@
     left: 35px;
     color: #fff;
     z-index: 1;
+
+    @include media('<phone') {
+      font-size: 20px;
+    }
   }
 
   .select-wrap{
     position: absolute;
-    top: 28px;
+    top: 31px;
     right: 25px;
-
-    @include media('<phone'){
-      top: 50px;
-    }
 
     &:after{
       content: '';
@@ -71,6 +72,9 @@
     -moz-appearance: none;
     appearance: none;
 
+    @include media('<tablet'){
+      margin-left: 5px;
+    }
     @include media('<phone'){
       width: 100px;
       height: 30px;
@@ -81,4 +85,7 @@
       background-color: #2f3242;
     }
   }
+}
+.sales-chart{
+  padding: 0 5%;
 }

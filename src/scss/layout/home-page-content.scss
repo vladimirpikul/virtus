@@ -22,6 +22,9 @@
     @include media('<desktop'){
       margin-bottom: 3%;
     }
+    @include media('<phone'){
+      margin-bottom: 4%;
+    }
   }
 }
 .default-block{
@@ -46,6 +49,11 @@
     text-align: center;
     line-height: 95px;
     box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+
+    @include media('<phone') {
+      height: 65px;
+      line-height: 65px;
+    }
   }
 
   .block-title{

@@ -10,4 +10,10 @@
   .project-item{
     background-color: #2f3242;
   }
+
+  .block-title{
+    @include media('<phone') {
+      font-size: 20px;
+    }
+  }
 }

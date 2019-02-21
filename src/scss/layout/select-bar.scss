@@ -19,7 +19,7 @@
   }
 
   .title-part{
-    @include media('<tablet'){
+    @include media('<desktop'){
       width: 100%;
     }
   }
@@ -44,7 +44,7 @@
     position: relative;
     display: inline-block;
 
-    @include media('<tablet'){
+    @include media('<desktop'){
       margin-left: auto;
     }
 

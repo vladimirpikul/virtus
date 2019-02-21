@@ -12,7 +12,11 @@
     width: 100%;
     height: 400px;
   }
-  @include media('<phone'){
+  @include media('<tablet'){
     height: 300px;
   }
+}
+.views-chart{
+  margin: 0 -30px;
+  width: calc(100% + 60px) !important;
 }

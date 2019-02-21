@@ -65,7 +65,6 @@
   },
   "dependencies": {
     "chart.js": "^2.7.3",
-    "google-charts-offload": "^1.0.0",
     "include-media": "^1.4.9",
     "jquery": "^3.3.1",
     "jquery-circle-progress": "^1.2.2",
