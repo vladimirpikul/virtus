@@ -62,14 +62,18 @@
   }
 
   .ui-datepicker-calendar{
-    padding: 45px 35px 40px;
+    padding: 28px 35px 40px;
     font-weight: bold;
     width: 100%;
     text-align: center;
     height: calc(100% - 95px);
 
     @include media('<phone'){
-      padding: 20px 10px;
+      padding: 5px 10px 20px;
+    }
+
+    thead{
+      line-height: 4;
     }
 
     a[class*='ui-state-']{

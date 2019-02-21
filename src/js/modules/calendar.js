@@ -3,6 +3,7 @@ const calendar = function createCalendar() {
 
   $myCalendar.datepicker({
     showOtherMonths: true,
+    dayNamesMin: [ "SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT" ],
   });
 };
 
