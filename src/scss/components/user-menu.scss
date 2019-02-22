@@ -93,10 +93,15 @@
       right: -11px;
       top: 2px;
 
+      @include media('<tablet'){
+        @include size(15px);
+
+        top: 0;
+        right: -5px;
+      }
       @include media('<phone'){
         @include size(12px);
 
-        top: 0;
         right: -6px;
       }
     }
