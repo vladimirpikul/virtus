@@ -4,13 +4,13 @@ const circleCounters = function circleCounters() {
   $.each($counter, function () {
     $(this).circleProgress({
       value: $(this).attr('data-value') * 0.01,
-      size: 75,
+      size: 76,
       thickness: 4,
       fill: '#2492ea',
       emptyFill: '#505464',
       startAngle: 4.7,
     }).on('circle-animation-progress', function (event, progress, stepValue) {
-      $(this).find('.percents').text(`${Math.round(stepValue * 100)}%`);
+      $(this).find('.value').text(`${Math.round(stepValue * 100)}%`);
     });
   });
 };

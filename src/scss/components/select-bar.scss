@@ -1,26 +1,28 @@
-.select-row{
-  margin-top: 95px;
-  margin-left: 95px;
+.select-bar{
+  margin: 95px 0 0 95px;
   background-color: #2480cd;
-  height: 95px;
+  min-height: 96px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0 23px 0 60px;
 
+  @include media('<desktop'){
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+  }
   @include media('<tablet'){
-    margin-top: 140px;
-    margin-left: 0;
+    margin: 140px 0 0 0;
     padding: 10px 20px;
   }
   @include media('<phone'){
     padding: 10px;
   }
 
-  .title-part{
-    @include media('<desktop'){
-      width: 100%;
+  @include media('<desktop'){
+    .title-part{
+      margin-bottom: 20px;
     }
   }
 
@@ -44,10 +46,6 @@
     position: relative;
     display: inline-block;
 
-    @include media('<desktop'){
-      margin-left: auto;
-    }
-
     &:after{
       content: '';
       position: absolute;
@@ -56,8 +54,8 @@
       top: 50%;
       transform: translateY(-50%) rotate(45deg);
       right: 24px;
-      border-right: 2px solid #fff;
-      border-bottom: 2px solid #fff;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
     }
   }
 
@@ -86,10 +84,6 @@
 
     @include media('<tablet'){
       margin-left: 10px;
-    }
-
-    option{
-      background-color: #2480cd;
     }
   }
 }

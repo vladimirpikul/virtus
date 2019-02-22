@@ -11,7 +11,7 @@ const salesChart = function drawSalesChart() {
         backgroundColor: '#505464',
         hoverBackgroundColor: '#2196f3',
         data: [700, 1000, 800, 500, 300, 500, 500, 700, 600, 900, 800, 250],
-      }]
+      }],
     },
 
     options: {
@@ -27,7 +27,7 @@ const salesChart = function drawSalesChart() {
           },
           gridLines: {
             display: false,
-          }
+          },
         }],
         yAxes: [{
           ticks: {
@@ -35,15 +35,15 @@ const salesChart = function drawSalesChart() {
           },
           gridLines: {
             color: '#454858',
-          }
+          },
         }],
       },
       layout: {
         padding: {
           top: 100,
-        }
-      }
-    }
+        },
+      },
+    },
   });
 };
 

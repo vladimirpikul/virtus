@@ -1,11 +1,14 @@
 .aside-bar{
   position: fixed;
+  display: flex;
+  justify-content: center;
   top: 95px;
   left: 0;
   width: 95px;
   height: 100%;
   z-index: 9;
   background-color: #2f3242;
+  overflow: auto;
   box-shadow: 3px 0 80px rgba(0, 0, 0, 0.2);
 
   @include media('<tablet'){
@@ -14,6 +17,9 @@
     height: 70px;
     position: absolute;
   }
+}
+.aside-menu-wrap{
+  width: 100%;
 }
 .aside-menu{
   @extend %listreset;

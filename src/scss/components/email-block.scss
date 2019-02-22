@@ -1,25 +1,29 @@
 .email-block{
-  overflow: hidden;
+  overflow: auto;
 
   @include media('<widescreen'){
     order: 2;
+  }
+  @include media('<tablet'){
+    height: 300px;
   }
 
   .block-title{
     @include media('<phone') {
       font-size: 20px;
     }
-  }
 
-  .blue-text{
-    color: #2196f3;
+    .count{
+      color: #2196f3;
+      background-color: transparent;
+    }
   }
 
   .email-item{
     height: 116px;
     display: flex;
     line-height: 2;
-    padding: 15px 25px 10px;
+    padding: 14px 25px 10px;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -30,7 +34,12 @@
   }
 
   .img-wrap{
-    min-width: 42px;
+    @include size(42px);
+
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 11px;
 
     @include media('<desktop'){
       flex-grow: 0;
@@ -38,8 +47,7 @@
   }
 
   .description{
-    margin-top: auto;
-    margin-left: 20px;
+    margin: auto 0 0 19px;
 
     @include media('<desktop'){
       flex-grow: 1;
@@ -48,6 +56,7 @@
     .title-date{
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     .title{
@@ -55,9 +64,7 @@
       font-size: 16px;
       color: #fff;
       white-space: nowrap;
-      text-overflow: ellipsis;
-      width: 55%;
-      overflow: hidden;
+      margin-right: 10px;
 
       &:hover{
         opacity: 0.8;
@@ -71,8 +78,6 @@
   }
 
   .date{
-    white-space: nowrap;
-
     &.new{
       color: #2196f3;
     }

@@ -6,7 +6,7 @@
   padding: 10px 24px;
   width: 100%;
   min-width: 292px;
-  height: 91px;
+  min-height: 91px;
   background-color: #3a3e52;
 
   .project-info{
@@ -15,11 +15,16 @@
   }
 
   .img-wrap{
-    width: 42px;
+    @include size(42px);
+
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
   }
 
   .description{
-    margin-left: 22px;
+    margin-left: 24px;
+    padding-bottom: 3px;
   }
 
   .name{
@@ -39,7 +44,7 @@
   }
 
   .link-price{
-    margin-top: 6px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
   }
@@ -67,24 +72,26 @@
     }
 
     .dot{
+      @include size(3px, 4px);
+
       &:before{
-        @include size(4px);
+        @include size(3px, 4px);
 
         content: '';
         position: absolute;
         background-color: #9ca1b2;
         border-radius: 50%;
-        top: -7px;
+        top: -6px;
       }
 
       &:after{
-        @include size(4px);
+        @include size(3px, 4px);
 
         content: '';
         position: absolute;
         background-color: #9ca1b2;
         border-radius: 50%;
-        bottom: -7px;
+        bottom: -6px;
       }
     }
   }
